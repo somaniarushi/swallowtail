@@ -1,11 +1,17 @@
 import React from 'react';
 // import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import styled from "styled-components";
 
 class App extends React.Component {
   render() {
-    return <DarkMode light={{h1: "blue", h2:"green"}} dark={{h1:"black", h2:"purple"}}>
-      <h1>Hi</h1>
+    return <DarkMode light={{h1: "blue", h2:"green"}} dark={{h1:"white", h2:"purple"}}>
+      <h1 style={{color: "blue"}}>Hi</h1>
+      <h1 style={{color: "blue"}}>Hi</h1>
+      <span>
+        <h3>Hello</h3>
+        Bye
+      </span>
     </DarkMode>
     }
 }
@@ -27,22 +33,22 @@ class DarkMode extends React.Component {
   }
 
   render() {
-    const children = this.props.children;
-    React.Children.forEach(children, (child => {
-      console.log(child.type)
-      return child;
-    }));
     return (
-      <>
-        <input type="checkbox" id="cb" onClick={this.handleClick} />
-        {console.log(this.props[this.state.mode])}
-        <h1 style={{color: this.props[this.state.mode]["h1"]}}>
-            Hi
-        </h1>
-        <h2 style={{color: this.props[this.state.mode]["h2"]}}>Hello</h2>
-      </>
-    )
+      <Main mode={this.state.mode}>
+          <input type="checkbox" id="cb" onClick={this.handleClick} />
+          {this.props.children}
+      </Main>
+    );
   }
 }
 
+const Main = styled.div`
+color: black;
+* {
+  color: ${props => (props.mode==="light" ? "black" : "purple")} !important;
+}
+h1 {
+  color: white;
+}
+`
 export default App;
