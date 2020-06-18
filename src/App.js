@@ -6,7 +6,7 @@ import Toggle from './toggle'
 
 class App extends React.Component {
   render() {
-    return <DarkModeController default="">
+    return <DarkModeController default="" h2="orange">
       <Testing />
     </DarkModeController>
     }
@@ -21,7 +21,6 @@ class DarkModeController extends React.Component {
 
   handleClick(event) {
     const target = event.target;
-    console.log(target.checked)
     if (target.checked && localStorage.getItem("mode")!=="dark") {
        localStorage.setItem("mode", "dark")
        this.setState({mode: 'dark'})

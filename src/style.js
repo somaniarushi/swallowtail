@@ -11,7 +11,7 @@ h1 {
   color: ${props => (props.mode==="dark" ? (props.colors.hasOwnProperty("h1") ? props.colors.h1 : "#a38cf8d8") : "")} !important;
 }
 h2 {
-  color: ${props => (props.mode==="dark" ? (props.colors.hasOwnProperty("h1") ? props.colors.h2 : "#a38cf8d8") : "")} !important;
+  color: ${props => (props.mode==="dark" ? (props.colors.hasOwnProperty("h2") ? props.colors.h2 : "#a38cf8d8") : "")} !important;
 }
 h3{
   color: ${props => (props.mode==="dark" ? (props.colors.hasOwnProperty("h3") ? props.colors.h3 : "#f0f0f0e5") : "")} !important;
