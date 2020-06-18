@@ -4,7 +4,9 @@ import './App.css';
 
 class App extends React.Component {
   render() {
-    return <DarkMode light="blue" dark="black"/>
+    return <DarkMode light="blue" dark="black">
+      <h1>Hi</h1>
+    </DarkMode>
   }
 }
 
@@ -25,13 +27,15 @@ class DarkMode extends React.Component {
   }
 
   render() {
+    const children = this.props.children;
+    React.Children.forEach(children, (child => {
+      console.log(child.type)
+      return child;
+    }));
     return (
       <>
         <input type="checkbox" id="cb" onClick={this.handleClick} />
-        {console.log(this.props[this.state.mode])}
-        <h1 style={{color: this.props[this.state.mode]}}>
-            Hi
-        </h1>
+
       </>
     )
   }
