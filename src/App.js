@@ -1,54 +1,46 @@
 import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
-import styled from "styled-components";
+
+import Testing from "./testing";
+import StyleSheet from "./style"
+import Toggle from './toggle'
 
 class App extends React.Component {
   render() {
-    return <DarkMode light={{h1: "blue", h2:"green"}} dark={{h1:"white", h2:"purple"}}>
-      <h1 style={{color: "blue"}}>Hi</h1>
-      <h1 style={{color: "blue"}}>Hi</h1>
-      <span>
-        <h3>Hello</h3>
-        Bye
-      </span>
-    </DarkMode>
+    return <DarkModeController default="">
+      <Testing />
+    </DarkModeController>
     }
 }
 
-class DarkMode extends React.Component {
+class DarkModeController extends React.Component {
   constructor(props) {
       super(props);
       this.handleClick = this.handleClick.bind(this);
-      this.state = { mode: 'light'}
+      this.state = { mode: (localStorage.getItem("mode") == null) ? "light" : localStorage.getItem("mode")}
   }
 
   handleClick(event) {
     const target = event.target;
-    if (target.checked) {
+    console.log(target.checked)
+    if (target.checked && localStorage.getItem("mode")!=="dark") {
+       localStorage.setItem("mode", "dark")
        this.setState({mode: 'dark'})
     } else {
+       localStorage.setItem("mode", "light")
        this.setState({mode: 'light'})
     }
   }
 
   render() {
     return (
-      <Main mode={this.state.mode}>
-          <input type="checkbox" id="cb" onClick={this.handleClick} />
-          {this.props.children}
-      </Main>
+      <StyleSheet mode={this.state.mode} colors={this.props}>
+        <Toggle handleClick={this.handleClick} mode={this.state.mode} />
+        {this.props.children}
+      </StyleSheet>
     );
   }
 }
 
-const Main = styled.div`
-color: black;
-* {
-  color: ${props => (props.mode==="light" ? "black" : "purple")} !important;
-}
-h1 {
-  color: white;
-}
-`
+
+
 export default App;
