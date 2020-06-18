@@ -3,10 +3,15 @@ import React from 'react';
 import './App.css';
 
 class App extends React.Component {
+  render() {
+    return <DarkMode light="blue" dark="black"/>
+  }
+}
+
+class DarkMode extends React.Component {
   constructor(props) {
       super(props);
       this.handleClick = this.handleClick.bind(this);
-      this.prop = {light: 'black', dark: 'blue'}
       this.state = { mode: 'light'}
   }
 
@@ -22,12 +27,11 @@ class App extends React.Component {
   render() {
     return (
       <>
-      <input type="checkbox" id="cb" onClick={this.handleClick} />
-      {console.log(this.prop[this.state.mode])}
-      <h1 style={{
-                  color: this.prop[this.state.mode]}}>
-                  Hi
-                  </h1>
+        <input type="checkbox" id="cb" onClick={this.handleClick} />
+        {console.log(this.props[this.state.mode])}
+        <h1 style={{color: this.props[this.state.mode]}}>
+            Hi
+        </h1>
       </>
     )
   }
