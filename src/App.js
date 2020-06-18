@@ -4,7 +4,7 @@ import './App.css';
 
 class App extends React.Component {
   render() {
-    return <DarkMode light="blue" dark="black"/>
+    return <DarkMode light={{h1: "blue", h2:"green"}} dark={{h1:"black", h2:"purple"}}/>
   }
 }
 
@@ -29,9 +29,10 @@ class DarkMode extends React.Component {
       <>
         <input type="checkbox" id="cb" onClick={this.handleClick} />
         {console.log(this.props[this.state.mode])}
-        <h1 style={{color: this.props[this.state.mode]}}>
+        <h1 style={{color: this.props[this.state.mode]["h1"]}}>
             Hi
         </h1>
+        <h2 style={{color: this.props[this.state.mode]["h2"]}}>Hello</h2>
       </>
     )
   }
