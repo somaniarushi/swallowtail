@@ -1,6 +1,6 @@
 <h1>Welcome to Dark Mode 💫</h1>
 
-#### An easy-to-use customizable dark mode react component.
+An easy-to-use customizable dark mode react component.
 
 <p> <a href="https://arushisomani.me/darkmode">Demo Page</a> </p>
 
