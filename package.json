@@ -1,19 +1,31 @@
 {
-  "name": "dark-mode",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@asomani/darkmode",
+  "version": "1.0.3",
+  "private": false,
+  "desctiption": "Easy-to-use customizable dark mode 🌒",
+  "main": "darkmode/index.js",
+  "liscence": "ISC",
   "dependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-stage-2": "^7.8.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "babel-loader": "^8.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "webpack-cli": "^3.3.12"
   },
+  "keywords": [
+    "react", "darkmode", "web-development"
+  ],
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "webpack",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

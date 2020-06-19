@@ -1,18 +1,9 @@
 import React from 'react';
 
-import Testing from "./testing";
 import StyleSheet from "./style"
-import Toggle from '../darkmode/toggle'
+import Toggle from './toggle'
 
-class App extends React.Component {
-  render() {
-    return <DarkModeController default="" h2="orange">
-      <Testing />
-    </DarkModeController>
-    }
-}
-
-class DarkModeController extends React.Component {
+class DarkMode extends React.Component {
   constructor(props) {
       super(props);
       this.handleClick = this.handleClick.bind(this);
@@ -42,4 +33,4 @@ class DarkModeController extends React.Component {
 
 
 
-export default App;
+export default DarkMode;
