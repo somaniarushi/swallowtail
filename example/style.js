@@ -5,7 +5,7 @@ background-color: ${props => (props.mode==="dark" ? (props.colors.hasOwnProperty
 margin: -10px;
 padding: 20px;
 * {
-  color: ${props => (props.mode==="dark" ? (props.colors.hasOwnProperty("default") ?  props.colors.default : "#f0f0f0e5") : "")} !important;
+  color: ${props => (props.mode==="dark" ? (props.colors.hasOwnProperty("default") ? (props.colors.default!=="" ? props.colors.default : "#f0f0f0e5") : "") : "")} !important;
 }
 h1 {
   color: ${props => (props.mode==="dark" ? (props.colors.hasOwnProperty("h1") ? props.colors.h1 : "#a38cf8d8") : "")} !important;
@@ -46,7 +46,7 @@ table tr {
 }
 code {
   background-color: ${props => (props.mode==="dark" ? (props.colors.hasOwnProperty("codebackground") ? props.colors.codebackground : "#784e85b2") : "")} !important;
-  color: ${props => (props.mode==="dark" ? (props.colors.hasOwnProperty("code") ? props.colors.codebackground : "#f0f0f0e5") : "")} !important;
+  color: ${props => (props.mode==="dark" ? (props.colors.hasOwnProperty("codebackground") ? props.colors.codebackground : "#784e85b2") : "")} !important;
 }
 `
 export default StyleSheet;

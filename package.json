@@ -1,10 +1,11 @@
 {
   "name": "@asomani/darkmode",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "private": false,
   "desctiption": "Easy-to-use customizable dark mode 🌒",
   "main": "darkmode/index.js",
-  "liscence": "ISC",
+  "license": "ISC",
+  "repository": "github:somaniarushi/swallowtail",
   "dependencies": {
     "@babel/core": "^7.0.1",
     "@babel/preset-env": "^7.0.0",
@@ -21,13 +22,17 @@
     "webpack-cli": "^3.3.12"
   },
   "keywords": [
-    "react", "darkmode", "web-development"
+    "react",
+    "darkmode",
+    "web-development"
   ],
   "scripts": {
     "start": "react-scripts start",
     "build": "webpack",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
