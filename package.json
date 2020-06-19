@@ -1,8 +1,8 @@
 {
   "name": "@asomani/darkmode",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": false,
-  "desctiption": "Easy-to-use customizable dark mode 🌒",
+  "description": "Easy-to-use customizable dark mode for react 🌒",
   "main": "darkmode/index.js",
   "license": "ISC",
   "repository": "git://github.com/somaniarushi/swallowtail.git",
@@ -24,7 +24,12 @@
   "keywords": [
     "react",
     "darkmode",
-    "web-development"
+    "web-development",
+    "widget",
+    "dark-theme", 
+    "switch-theme",
+    "ui", 
+    "frontend"
   ],
   "scripts": {
     "start": "react-scripts start",
