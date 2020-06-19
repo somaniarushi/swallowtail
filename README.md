@@ -2,7 +2,9 @@
 
 An easy-to-use customizable dark mode react component.
 
-<p> <a href="https://arushisomani.me/darkmode">Demo Page</a> </p>
+## Demo
+<a href="https://arushisomani.me/darkmode">Demo Website!</a>
+![](./example/darkmodedemo.gif)
 
 
 ## Install
