@@ -1,11 +1,11 @@
 {
   "name": "@asomani/darkmode",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "private": false,
   "desctiption": "Easy-to-use customizable dark mode 🌒",
   "main": "darkmode/index.js",
   "license": "ISC",
-  "repository": "github:somaniarushi/swallowtail",
+  "repository": "git://github.com/somaniarushi/swallowtail.git",
   "dependencies": {
     "@babel/core": "^7.0.1",
     "@babel/preset-env": "^7.0.0",
