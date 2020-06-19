@@ -79,4 +79,4 @@ Currently, I'm working on:
 - Setting up an option to pass in a custom toggle
 - Making toggle location more variable
 
-_Made by ♥️ by asomani_
+_Made with ♥️ by asomani_
