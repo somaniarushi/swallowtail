@@ -1,6 +1,6 @@
 {
   "name": "@asomani/darkmode",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "private": false,
   "desctiption": "Easy-to-use customizable dark mode 🌒",
   "main": "darkmode/index.js",
