@@ -1,8 +1,9 @@
-# Welcome to Dark Mode 💫
+<h1 align="center">Welcome to Dark Mode 💫</h1>
 
-An easy-to-use customizable dark mode react component 🌒
+#### An easy-to-use customizable dark mode react component.
 
-<h4 align="center"> 🌒 <a href="https://arushisomani.me/darkmode">Demo Page</a>     🌗     <a href="https://npmjs.org/@asomani/darkmode">Release On NPMJS 🌘 </h4>
+<p align="center"> <a href="https://arushisomani.me/darkmode">Demo Page</a> </p>
+<p align="center"> <a href="https://npmjs.org/@asomani/darkmode">Release On NPMJS </p>
 
 
 
