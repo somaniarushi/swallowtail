@@ -1,6 +1,6 @@
 {
   "name": "@asomani/darkmode",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": false,
   "description": "Easy-to-use customizable dark mode for react 🌒",
   "main": "darkmode/index.js",
